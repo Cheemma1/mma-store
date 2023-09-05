@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const [product, setProduct] = useState([]);
@@ -25,14 +26,18 @@ console.log(product)
 <div className="grid grid-cols-4 gap-8 p-4 w-full">
   { product.filter((item) => item.title.toLowerCase().includes (search.toLowerCase()))
   .map((items)=>(
-<div key={items?.id} className="  bg-yellow-100 p-2 ">
+    <Link to={`/details/${items?.id}`}
+    key={items?.id} 
+    >
+<div 
+className="  bg-yellow-100 p-2 ">
   {/* <div className="w-full h-fit"> */}
       <img src={items?.image} alt="product-image"  className="w-full h-full object-contain"/>
   {/* </div> */}
   
     <h2 className="font-bold">{items?.title}</h2>
     <p>${items?.price}</p>
-</div>
+</div></Link>
   ))}  
 </div>
   </div>)
