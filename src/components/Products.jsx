@@ -21,7 +21,7 @@ console.log(product)
   return(
   
   <div className=" my-10 bg-slate-50 p-3">
-<h2 className="text-center text-2xl py-3 font-bold">Our Products</h2>
+<h2 className="text-center text-2xl py-3 font-bold">Our Product</h2>
 <input type="text"  placeholder="search product" value={search} onChange={(e)=>setSearch(e.target.value)} className="w-full outline-none rounded-md p-4 shadow-sm "/>
 <div className="grid grid-cols-4 gap-8 p-4 w-full">
   { product.filter((item) => item.title.toLowerCase().includes (search.toLowerCase()))
