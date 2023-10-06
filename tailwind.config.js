@@ -8,10 +8,10 @@ export default {
     extend: {
       backgroundImage: {
         "hero-pattern":
-          "url('./src/assets/woman-holding-various-shopping-bags-copy-space.jpg')",
+          "url('./src/assets/beautiful-smiling-young-blonde-woman-pointing-sunglasses-holding-shopping-bags-credit-card-pink-wall.jpg')",
 
         "footer-pattern":
-          "url('./src/assets/woman-holding-various-shopping-bags-copy-space.jpg')",
+          "url('./src/assets/incendiary-fantastically-beautiful-girl-coat-eco-fur-moves-fun-picture-lovely-lady-pink-clothes-removebg-preview 1.png')",
       },
     },
   },

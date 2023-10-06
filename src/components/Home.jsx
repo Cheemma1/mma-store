@@ -1,17 +1,15 @@
-import React from 'react'
-import Nav from './Nav'
-import Hero from './Hero'
-import Products from './Products'
-
+import React from "react";
+// import Nav from "./Nav";
+import Hero from "./Hero";
+import Products from "./Products";
 
 const Home = () => {
   return (
-    <div className=' font-poppins container m-auto'>
-    <Nav/>  
-    <Hero/> 
-    <Products/> 
+    <div className=" font-poppins">
+      <Hero />
+      <Products />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
