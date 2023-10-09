@@ -4,7 +4,7 @@ import Nav from "./Nav";
 const Hero = () => {
   return (
     <>
-      <section className="bg-hero-pattern bg-center bg-cover h-screen relative opacity-80">
+      <section className="bg-hero-pattern bg-center bg-cover h-screen relative ">
         <div className="container m-auto px-4 md:px-0">
           <Nav />
           <div className="absolute top-1/2 md:right-9 md:w-1/4 md:top-2/4 ">
