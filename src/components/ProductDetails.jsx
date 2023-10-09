@@ -5,20 +5,23 @@ import Nav from "./Nav";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/clientSlice";
 
-const ProductDetails = ({ product }) => {
+const ProductDetails = () => {
+  // Remove the `product` prop
   const dispatch = useDispatch();
+  const { id } = useParams(); // Get the 'id' parameter from the URL
+
   const handleAddToCart = () => {
     dispatch(
       addToCart({
-        id: product.id,
-        img: product.image,
-        price: product.price,
-        desc: product.description,
+        id: id, // Use the 'id' from the URL
+        img: items?.image,
+        price: items?.price,
+        desc: items?.description,
+        quantity: 1,
       })
     );
   };
 
-  const { id } = useParams();
   const [items, setItems] = useState({});
   useEffect(() => {
     const getDetails = async () => {
@@ -34,16 +37,18 @@ const ProductDetails = ({ product }) => {
 
     getDetails();
   }, [id]);
+
   console.log(items);
+
   return (
-    <div className="container m-auto font-poppins b">
+    <div className="container m-auto font-poppins  px-5 md:px-0">
       <Nav />
-      <div className="flex items-center  justify-between gap-20 pt-14">
+      <div className="flex  flex-col md:flex-row items-center justify-center  md:justify-between gap-20 pt-14">
         <img src={items?.image} alt="product-image" className="w-64" />
         <div className="">
           <h2 className="font-bold py-6">{items?.title}</h2>
-          <p className="pr-56">{items?.description}</p>
-
+          <p className=" p-0 md:last:pr-56">{items?.description}</p>
+          <p>{items?.price}</p>
           <button
             className="bg-black text-white mt-6  py-2 px-3"
             onClick={handleAddToCart}

@@ -4,10 +4,10 @@ import Nav from "./Nav";
 const Hero = () => {
   return (
     <>
-      <section className="bg-hero-pattern bg-center bg-cover h-screen relative">
-        <div className="container m-auto">
+      <section className="bg-hero-pattern bg-center bg-cover h-screen relative opacity-80">
+        <div className="container m-auto px-4 md:px-0">
           <Nav />
-          <div className="absolute right-9 w-1/4 top-2/4 ">
+          <div className="absolute top-1/2 md:right-9 md:w-1/4 md:top-2/4 ">
             <h1 className="mb-3 text-white text-1xl">
               Welcome to Mma-store, where style meets convenience. Explore a
               curated selection of fashion, gadgets, and more. Shop smarter
